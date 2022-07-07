@@ -217,7 +217,7 @@ section {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 10px 0 10px 30px;
+	/* padding: 10px 0 10px 30px; */
 	font-family: 'Cedora-Regular', sans-serif;
 	font-size: 16px;
 	font-weight: 700;
@@ -298,6 +298,63 @@ section {
 	left: 100%;
 	visibility: visible;
 }
+
+.navbar li:nth-child(1) a,
+.navbar li:nth-child(2) a,
+.navbar li:nth-child(3) a,
+.navbar li:nth-child(4) a,
+.navbar li:nth-child(5) a {
+   position: relative;
+   text-decoration: none; 
+}
+
+.navbar li:nth-child(1) a:before,
+.navbar li:nth-child(2) a:before,
+.navbar li:nth-child(3) a:before,
+.navbar li:nth-child(4) a:before,
+.navbar li:nth-child(5) a:before {
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 2px;
+   bottom: 0;
+   left: 0;
+   background-color: #25d366;
+   visibility: hidden;
+   -webkit-transform: scaleX(0);
+   transform: scaleX(0);
+   -webkit-transition: all 0.3s ease-in-out 0s;
+   transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar li:nth-child(1) a:hover:before,
+.navbar li:nth-child(2) a:hover:before,
+.navbar li:nth-child(3) a:hover:before,
+.navbar li:nth-child(4) a:hover:before,
+.navbar li:nth-child(5) a:hover:before {
+   visibility: visible;
+   -webkit-transform: scaleX(1);
+   transform: scaleX(1);
+}
+
+.navbar li a.active:before {
+   visibility: visible;
+   -webkit-transform: scaleX(1);
+   transform: scaleX(1);
+}
+
+.navbar li:nth-child(6) i,
+.navbar li:last-child i {
+	font-size: 1.2rem;
+   transition: transform .5s;
+   margin-left: 2rem;
+}
+
+.navbar li:nth-child(6) i:hover,
+.navbar li:last-child i:hover {
+	transform: scale(1.2);
+}
+
 @media (max-width: 1366px) {
 	.navbar .dropdown .dropdown ul {
 		left: -90%;
@@ -422,9 +479,9 @@ section {
 	color: #444444;
 	margin: 15px 0 0 0;
 	font-size: 16px;
-   font-weight: 300;
+	font-weight: 300;
 	text-align: center;
-   width: 40%;
+	width: 40%;
 }
 .hero .btn-get-started {
 	margin-top: 30px;
