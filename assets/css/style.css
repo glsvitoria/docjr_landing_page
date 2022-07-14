@@ -76,6 +76,10 @@ section {
 	font-weight: 700;
 	color: #012970;
 }
+.cards {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+}
 @media (max-width: 768px) {
 	.section-header p {
 		font-size: 28px;
@@ -1457,6 +1461,13 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+#contact > div > .row, #contact > div > div > div > .row {
+   flex-wrap: nowrap;
+}
+
+#contact > div > div > div > .row  {
+   margin: 0 auto;
+}
 .contact .info-box {
 	color: #444444;
 	background: #fafbff;
