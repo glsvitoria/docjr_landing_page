@@ -78,7 +78,7 @@ section {
 }
 .cards {
    display: grid;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: 1fr 1.2fr 1fr;
 }
 @media (max-width: 768px) {
 	.section-header p {
@@ -553,11 +553,27 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about .div__card__about, #features .div__card__about {
+   width: 200%;
+}
+.about .div__card__about__img, #features .div__card__about__img {
+   margin: 0 auto;
+   margin-bottom: 2rem;
+}
+.about .div__card__about__img img, #features .div__card__about__img img {
+   width: 15rem;
+   margin: 0 auto;
+}
 .about .content {
-	background-color: #f6f9ff;
+   background-color: #f4f7fd;
 	padding: 40px;
+   max-height: 40rem;
+   border-top-left-radius: .8rem;
+   border-top-right-radius: .8rem;
 }
 .about h3 {
+   text-align: center;
+   margin-bottom: 1rem;
 	font-size: 14px;
 	font-weight: 700;
 	color: var(--cor1);
@@ -571,6 +587,8 @@ section {
 .about p {
 	margin: 15px 0 30px 0;
 	line-height: 24px;
+   text-align: justify;
+   font-size: 14px;
 }
 .about .btn-read-more {
 	line-height: 0;
@@ -660,24 +678,26 @@ section {
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
-.features .feature-box {
-	padding: 24px 20px;
-	box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
-	transition: 0.3s;
-	height: 100%;
+.features__elements {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   margin: -1rem auto;
+}
+.features .content {
+   padding: 40px 32px;
 }
 .features .feature-box h3 {
-	font-size: 18px;
+	font-size: 13px;
 	color: #012970;
 	font-weight: 700;
 	margin: 0;
 }
 .features .feature-box i {
 	line-height: 0;
-	background: #ecf3ff;
-	padding: 4px;
+	background: #e4eaf5;
+	padding: 2px;
 	margin-right: 10px;
-	font-size: 24px;
+	font-size: 20px;
 	border-radius: 3px;
 	transition: 0.3s;
 }
@@ -687,12 +707,6 @@ section {
 }
 .features .feture-tabs {
 	margin-top: 120px;
-}
-.features .feture-tabs h3 {
-	color: #012970;
-	font-weight: 700;
-	font-size: 32px;
-	margin-bottom: 10px;
 }
 @media (max-width: 768px) {
 	.features .feture-tabs h3 {
