@@ -79,12 +79,12 @@ section {
 .cards {
    display: grid;
    grid-template-columns: 1fr 1.2fr 1fr;
-   height: 50vh;
+   height: 54vh;
 }
 .cards div.content {
 	box-shadow: 0px 0 05px rgba(1, 41, 112, 0.08);
 
-   height: 50vh;
+   height: 54vh;
 }
 @media (max-width: 1400px) {
 	.cards {
@@ -96,53 +96,44 @@ section {
 }
 @media (max-width: 1200px) {
 	.cards {
-      height: 62vh;
+      height: 64vh;
    }
    .cards div.content {
-      height: 62vh;
+      height: 64vh;
    }
 }
 @media (max-width: 992px) {
+   .about .card__p {
+      font-size: 16px;
+   }
    .cards div.content {
       width: 50%;
-      height: 68;
+      height: 68vh;
    }
    .cards {
-      height: 68vh;
+      grid-template-columns: 1fr;
+      height: 150vh;
    }
 }
 
 @media (max-width: 770px) {
-	.cards {
-      grid-template-columns: 1fr;
-      height: 150vh;
-   }
-   .cards div.content {
-      height: 100vh;
+   .cards {
+      height: 160vh;
    }
 }
 
 @media (max-width: 480px) {
 	.cards {
-      grid-template-columns: 1fr;
-      height: 160vh;
-   }
-}
-@media (max-width: 400px) {
-	.cards {
-      grid-template-columns: 1fr;
       height: 170vh;
    }
 }
 @media (max-width: 380px) {
 	.cards {
-      grid-template-columns: 1fr;
       height: 200vh;
    }
 }
-@media (max-width: 234px) {
+@media (max-width: 270px) {
 	.cards {
-      grid-template-columns: 1fr;
       height: 220vh;
    }
 }
@@ -242,6 +233,7 @@ section {
 	transition: all 0.5s;
 	z-index: 997;
 	padding: 20px 0;
+   background-color: #FFF;
 }
 .header.header-scrolled {
 	background: #fff;
@@ -533,11 +525,41 @@ section {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+.hero > div > div > div h1, .hero > div > div > div h2{
+   color: #f4f7fd;
+}
+@media (max-width: 1000px){
+   .hero > div > div > div h1 {
+      font-size: 36px;
+   }
+   .hero > div > div > div h2 {
+      font-size: 14px;
+      width: 80%;
+   }
+}
+@media (max-width: 400px){
+   .hero > div > div > div h1 {
+      font-size: 28px;
+   }
+   .hero > div > div > div h2 {
+      font-size: 12px;
+      width: 90%;
+   }
+}
+@media (max-width: 300px){
+   #hero .btn-get-started {
+      padding: 15px 32px;
+   }
+   #hero .btn-get-started span {
+      font-size: 14px;
+   }
+}
 .hero {
 	width: 100%;
 	height: 100vh;
-	background: url(../img/hero-bg.png) top center no-repeat;
+	background: url(../img/includes/image_initial.jpg) top center no-repeat;
 	background-size: cover;
+   box-shadow: inset 0px 0px 10px 500px rgba(0, 0, 0, 0.6);
 }
 .hero h1 {
 	margin: 0;
@@ -561,7 +583,6 @@ section {
 	transition: 0.5s;
 	color: #fff;
 	background: var(--cor1);
-	box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
 }
 .hero .btn-get-started span {
 	font-family: 'Nunito', sans-serif;
@@ -587,7 +608,7 @@ section {
 }
 @media (max-width: 991px) {
 	.hero {
-		height: auto;
+		height: 60vh;
 		padding: 120px 0 60px 0;
 	}
 	.hero .hero-img {
@@ -620,16 +641,28 @@ section {
 # About
 --------------------------------------------------------------*/
 #about .content {
-   width: 200%;
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
+   padding: 32px;
 }
-@media (max-width: 992px) {
-   #about .content {
-      width: 100%;
+#about p {
+   font-size: 14px;
+}
+#about .content p {
+   margin-bottom: 10px;
+}
+@media (max-width: 1200px) {
+   #about img {
+      display: none;
    }
 }
-#about img {
-   width:80%;
-   margin-left: 15%;
+@media (max-width: 1000px) {
+   #about .content {
+      padding: 24px 28px 10px 28px;
+   }
+   #about p {
+      font-size: 11px;
+   }
 }
 .about .div__card__about, #features .div__card__about {
    width: 200%;
@@ -758,10 +791,9 @@ section {
 --------------------------------------------------------------*/
 .features__elements {
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr;
    margin: 0 auto;
 }
-
 @media (max-width: 1400px) {
 	.features__elements {
       grid-template-columns: 1fr 1fr;
@@ -783,22 +815,31 @@ section {
 }
 @media (max-width: 992px) {
 	.features__elements {
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+
       margin-top: -2rem;
    }
 }
 @media (max-width: 770px) {
 	.features__elements {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1.4fr 1fr;
+      width: 80%;
    }
 }
 @media (max-width: 450px) {
 	.features__elements {
-      grid-template-columns: 1fr 1fr;
+      width: 100%;
    }
 }
 @media (max-width: 380px) {
 	.features__elements {
       grid-template-columns: 1fr;
+      width: 80%;
+   }
+}
+@media (max-width: 280px) {
+	.features__elements {
+      width: 100%;
    }
 }
 .features .content {
