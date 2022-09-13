@@ -944,8 +944,9 @@ section {
 }
 .contact .info-box {
 	color: #444444;
-	background: #fafbff;
+   background: #f4f7fd;
 	padding: 30px;
+   height: 15rem;
 }
 .contact .info-box i {
 	font-size: 38px;
@@ -1054,9 +1055,26 @@ section {
 .contact > div > div > div > div::-webkit-scrollbar {
    width: 0px;
 }
+@media (max-width: 1400px) {
+   .info-box.email p {
+      overflow-x: scroll;
+   }
 
+   .info-box.email p::-webkit-scrollbar {
+      width: 8px;
+   }
+    
+   .info-box.email p::-webkit-scrollbar-track {
+      background: #FFF;
+   }
+    
+   .info-box.email p::-webkit-scrollbar-thumb {
+      background-color: gray; 
+      border: 5px solid #FFF;
+      border-radius: 20px;
+   }
+}
 @media (max-width: 992px) {
-
    .contact > div > div > div > div {
       overflow-x: scroll;
    }
